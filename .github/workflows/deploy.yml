@@ -31,7 +31,10 @@ jobs:
           node-version: 22
           cache: npm
 
-      - run: npm ci
+      # Not npm ci: sharp ships optional wasm dependencies whose versions
+      # resolve differently between npm releases, which makes a lock file
+      # written locally fail the strict check here.
+      - run: npm install --no-audit --no-fund
 
       - run: npx next build
 
