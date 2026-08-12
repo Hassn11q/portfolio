@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react/dist/ssr/ArrowUpRight";
+import { asset } from "@/data/content";
 import type { Project } from "@/data/projects";
 import type { UiStrings } from "@/data/ui";
 import { ArchitectureDiagram } from "./architecture-diagram";
@@ -25,13 +26,13 @@ function Visual({ project }: { project: Project }) {
     const image = project.images[0];
     return (
       <a
-        href={image.src}
+        href={asset(image.src)}
         target="_blank"
         rel="noreferrer noopener"
         className="frame tilt settle block overflow-hidden"
       >
         <Image
-          src={image.src}
+          src={asset(image.src)}
           alt={image.alt}
           width={image.width}
           height={image.height}
