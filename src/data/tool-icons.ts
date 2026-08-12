@@ -1,0 +1,36 @@
+/**
+ * Simple Icons slugs for the tools named in project stacks. Anything absent
+ * here has no official mark in the set and stays as text.
+ */
+export const iconFor: Record<string, string> = {
+  Python: "python",
+  PyTorch: "pytorch",
+  TensorFlow: "tensorflow",
+  "Hugging Face Transformers": "huggingface",
+  "scikit-learn": "scikitlearn",
+  ONNX: "onnx",
+  OpenCV: "opencv",
+  FastAPI: "fastapi",
+  Docker: "docker",
+  "Docker Compose": "docker",
+  "Docker and Compose": "docker",
+  Kubernetes: "kubernetes",
+  BentoML: "bentoml",
+  "GitHub Actions": "githubactions",
+  PostgreSQL: "postgresql",
+  Qdrant: "qdrant",
+  Supabase: "supabase",
+  "Apache Kafka": "apachekafka",
+  "Apache Airflow": "apacheairflow",
+  pandas: "pandas",
+  Streamlit: "streamlit",
+  Gradio: "gradio",
+  Plotly: "plotly",
+  SQLite: "sqlite",
+  pytest: "pytest",
+  LangChain: "langchain",
+  Ollama: "ollama",
+  ElevenLabs: "elevenlabs",
+  NVIDIA: "nvidia",
+  Linux: "linux",
+};
