@@ -6,6 +6,7 @@ import { profile } from "@/data/profile";
 export const alt = `${profile.name}, AI Engineer`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+export const dynamic = "force-static";
 
 /** The share card carries the same type and palette as the page itself. */
 export default async function OpengraphImage() {

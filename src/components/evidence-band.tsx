@@ -11,7 +11,6 @@ async function githubStats(): Promise<{ repos: number } | null> {
   try {
     const response = await fetch(`https://api.github.com/users/${githubUser}`, {
       headers: { Accept: "application/vnd.github+json" },
-      next: { revalidate: 3600 },
     });
     if (!response.ok) return null;
     const data = await response.json();

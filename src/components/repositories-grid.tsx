@@ -12,7 +12,6 @@ async function fetchMeta(name: string): Promise<RepoMeta | null> {
   try {
     const response = await fetch(`https://api.github.com/repos/${githubUser}/${name}`, {
       headers: { Accept: "application/vnd.github+json" },
-      next: { revalidate: 3600 },
     });
     if (!response.ok) return null;
     const data = await response.json();
