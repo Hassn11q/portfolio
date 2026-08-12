@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { SiteContent } from "@/data/content";
 import { HeroDemo } from "./hero-demo";
 import { Magnetic } from "./magnetic";
@@ -52,9 +53,9 @@ export function Hero({ c }: { c: SiteContent }) {
           <a href="#contact" className="btn btn-ghost">
             {c.ui.heroSecondary}
           </a>
-          <a href={c.locale === "en" ? "/cv" : "/ar/cv"} className="btn btn-ghost">
+          <Link href={c.locale === "en" ? "/cv" : "/ar/cv"} className="btn btn-ghost">
             {c.ui.cv}
-          </a>
+          </Link>
         </div>
 
         {c.projects[0].demo && (

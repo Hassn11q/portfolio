@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { GithubLogoIcon } from "@phosphor-icons/react/dist/csr/GithubLogo";
 import { LinkedinLogoIcon } from "@phosphor-icons/react/dist/csr/LinkedinLogo";
@@ -85,12 +86,12 @@ export function SiteNav({ c }: { c: SiteContent }) {
         <span aria-hidden="true" className="hidden h-4 w-px bg-rule md:block" />
 
         <div className="flex items-center gap-1.5 md:ps-1.5">
-          <a
+          <Link
             href={c.locale === "en" ? "/cv" : "/ar/cv"}
             className="hidden min-h-9 items-center rounded-full px-3 text-sm whitespace-nowrap text-ink-2 transition-colors duration-200 ease-out hover:bg-ground-sunk hover:text-ink lg:inline-flex"
           >
             {c.ui.cv}
-          </a>
+          </Link>
           {/* Segmented language switch: the current locale is marked, the other is a link. */}
           <span className="hidden items-center rounded-full border border-rule text-sm sm:inline-flex">
             <span
@@ -99,13 +100,13 @@ export function SiteNav({ c }: { c: SiteContent }) {
             >
               {c.locale === "en" ? "EN" : "AR"}
             </span>
-            <a
+            <Link
               href={c.ui.languageSwitch.to}
               lang={c.locale === "en" ? "ar" : "en"}
               className="min-h-8 rounded-full px-2.5 py-1.5 text-ink-3 transition-colors duration-200 ease-out hover:text-ink"
             >
               {c.locale === "en" ? "AR" : "EN"}
-            </a>
+            </Link>
           </span>
           <a
             href={links.github}
@@ -173,13 +174,13 @@ export function SiteNav({ c }: { c: SiteContent }) {
               </li>
             ))}
             <li className="mt-8 flex flex-wrap gap-3">
-              <a
+              <Link
                 href={c.ui.languageSwitch.to}
                 lang={c.locale === "en" ? "ar" : "en"}
                 className="btn btn-ghost"
               >
                 {c.ui.languageSwitch.label}
-              </a>
+              </Link>
               <a
                 href={links.github}
                 target="_blank"

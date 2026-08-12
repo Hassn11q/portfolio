@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 
 export default function GlobalNotFound() {
   return (
-    <html lang="en">
-      <body className={geistMono.variable}>
+    <html lang="en" className={geistMono.variable}>
+      <body>
         <main className="flex min-h-[100dvh] items-center">
           <div className="shell">
             <p className="meta num">{c.ui.notFound.code}</p>

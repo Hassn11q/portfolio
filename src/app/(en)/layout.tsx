@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { DocumentShell } from "@/components/document-shell";
-import { content, siteUrl } from "@/data/content";
+import { asset, content, siteUrl } from "@/data/content";
 import "../globals.css";
 
 const geistMono = Geist_Mono({
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }] },
+  icons: { icon: [{ url: asset("/icon.svg"), type: "image/svg+xml" }] },
 };
 
 export default function EnglishLayout({ children }: { children: React.ReactNode }) {

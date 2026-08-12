@@ -64,7 +64,12 @@ export type SiteContent = {
   ui: UiStrings;
 };
 
-export const siteUrl = profile.siteUrl;
+/** Set when the site is served from a project page rather than a domain root. */
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? profile.siteUrl;
+
+/** Prefixes a path in `public` so it resolves under the base path. */
+export const asset = (path: string) => `${basePath}${path}`;
 export const links = profile.links;
 export const githubUser = profile.githubUser;
 
